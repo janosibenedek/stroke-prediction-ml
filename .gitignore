@@ -221,3 +221,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Project-specific
+data/
+kaggle.json
+
+# VS Code settings (machine-specific paths)
+.vscode/
