@@ -39,7 +39,7 @@ A teljes elemzés, a kóddal és az értelmezésekkel együtt, a [`projekt.ipynb
 | 5×2cv combined F-próba (Alpaydin) | F = 1,46, p = 0,36 | nem szignifikáns |
 | McNemar (0,5-ös küszöb) | χ² = 47,1, p ≈ 7·10⁻¹² | eltérő döntési pont: az RF 69-cel kevesebb téves riasztást, de 4-gyel több kimaradt stroke-ot ad |
 
-**Jellemzőfontosság:** mindkét modell túlnyomórészt az életkorra támaszkodik (permutation importance: az `age` keverése 0,31, ill. 0,26 ROC-AUC-csökkenést okoz). A hiányzó BMI esélyhányadosa 3,24: a hiány nem véletlen, ezért külön kategóriaként is megtartottuk.
+**Jellemzőfontosság:** mindkét modell túlnyomórészt az életkorra támaszkodik (permutation importance: az `age` keverése 0,31, ill. 0,26 ROC-AUC-csökkenést okoz). A hiányzó BMI esélyhányadosa a normál, a túlsúlyos és az elhízott BMI-kategóriához képest is kb. 4,3: a hiány nem véletlen, ezért külön kategóriaként is megtartottuk.
 
 ## Ábrák
 
@@ -52,7 +52,7 @@ Minden ábrát a notebook generál a `results/figures/` mappába.
 | ![Stroke-arány kategóriánként](results/figures/03_kategoriak.png) | ![Hiányzó értékek](results/figures/04_hianyzo_ertekek.png) |
 | **3.** Stroke-arány kategóriánként | **4.** A hiányzó BMI és az „Unknown” dohányzás |
 | ![Összefüggések](results/figures/05_osszefuggesek.png) | ![PCA scree](results/figures/06_pca_scree.png) |
-| **5.** Stroke-arány korcsoportonként, Spearman-korreláció | **6.** PCA: 19 komponens kell a variancia 95%-ához |
+| **5.** Stroke-arány korcsoportonként, Spearman-korreláció | **6.** PCA: 15 komponens kell a variancia 95%-ához |
 | ![CV foldok](results/figures/07_cv_foldok.png) | ![Teszteredmények](results/figures/08_teszt_eredmenyek.png) |
 | **7.** ROC-AUC az 5 CV-foldon | **8.** Tévesztési mátrixok, ROC- és PR-görbe a teszten |
 | ![Bootstrap különbség](results/figures/09_bootstrap_kulonbseg.png) | ![Permutation importance](results/figures/10_permutation_importance.png) |
@@ -83,7 +83,7 @@ stroke-prediction-ml/
    pip install -r requirements.txt
    ```
 
-2. **Adat:** töltsd le a `healthcare-dataset-stroke-data.csv` fájlt a [Kaggle-oldalról](https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset), és tedd a `data/` mappába. Az adat nem része a repónak; a felhasználási feltételek a Kaggle-oldal *License* rovatában olvashatók.
+2. **Adat:** töltsd le a `healthcare-dataset-stroke-data.csv` fájlt a [Kaggle-oldalról](https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset), és tedd a `data/` mappába. Az adat nem része a repónak: a Kaggle-oldal szerint bizalmas forrásból származik, csak oktatási célra használható, és a szerzőt (fedesoriano) fel kell tüntetni.
 
 3. **Futtatás:** nyisd meg a `projekt.ipynb`-t VS Code-ban vagy Jupyterben, válaszd a `stroke-ml` kernelt, és futtasd végig (*Run All*). A gép sebességétől függően néhány percig tart. Az ábrák és a `metrics.json` újragenerálódnak.
 
