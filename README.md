@@ -83,7 +83,7 @@ stroke-prediction-ml/
    pip install -r requirements.txt
    ```
 
-2. **Adat:** töltsd le a `healthcare-dataset-stroke-data.csv` fájlt a [Kaggle-oldalról](https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset), és tedd a `data/` mappába. Az adat nem része a repónak: a Kaggle-oldal szerint bizalmas forrásból származik, csak oktatási célra használható, és a szerzőt (fedesoriano) fel kell tüntetni.
+2. **Adat:** töltsd le a `healthcare-dataset-stroke-data.csv` fájlt a [Kaggle-oldalról](https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset), és tedd a `data/` mappába. Az adat nem része a repónak. A Kaggle-oldal licence *Data files © Original Authors*: ez nem nyílt licenc, a jogok az eredeti szerzőké, ezért az adatot nem terjesztjük tovább. Az oldal leírása szerint az adat bizalmas forrásból származik, csak oktatási célra használható, és a szerzőt (fedesoriano) fel kell tüntetni.
 
 3. **Futtatás:** nyisd meg a `projekt.ipynb`-t VS Code-ban vagy Jupyterben, válaszd a `stroke-ml` kernelt, és futtasd végig (*Run All*). A gép sebességétől függően néhány percig tart. Az ábrák és a `metrics.json` újragenerálódnak.
 
