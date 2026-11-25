@@ -1,0 +1,86 @@
+{
+  "cv": {
+    "Dummy (alsó padló)": {
+      "roc_auc": 0.5,
+      "pr_auc": 0.048690869152753384,
+      "best_params": {}
+    },
+    "Baseline: logisztikus regresszió": {
+      "roc_auc": 0.8514453613618137,
+      "pr_auc": 0.21928580948962023,
+      "best_params": {
+        "model__C": 0.1
+      }
+    },
+    "Haladó: Random Forest": {
+      "roc_auc": 0.8464286140571489,
+      "pr_auc": 0.20830721262056984,
+      "best_params": {
+        "model__max_depth": null,
+        "model__max_features": "sqrt",
+        "model__min_samples_leaf": 20
+      }
+    }
+  },
+  "test": {
+    "Dummy (alsó padló)": {
+      "ROC-AUC": 0.5,
+      "PR-AUC (AP)": 0.04892367906066536,
+      "recall (szenzitivitás)": 0.0,
+      "specificitás": 1.0,
+      "precision": 0.0,
+      "F1": 0.0,
+      "MCC": 0.0,
+      "balanced accuracy": 0.5,
+      "Brier": 0.04653020684070245,
+      "TP": 0.0,
+      "FP": 0.0,
+      "FN": 50.0,
+      "TN": 972.0
+    },
+    "Baseline: logisztikus regresszió": {
+      "ROC-AUC": 0.834917695473251,
+      "PR-AUC (AP)": 0.2304579313727884,
+      "recall (szenzitivitás)": 0.84,
+      "specificitás": 0.7397119341563786,
+      "precision": 0.1423728813559322,
+      "F1": 0.24347826086956523,
+      "MCC": 0.27596382903876593,
+      "balanced accuracy": 0.7898559670781893,
+      "Brier": 0.16917764870806853,
+      "TP": 42.0,
+      "FP": 253.0,
+      "FN": 8.0,
+      "TN": 719.0
+    },
+    "Haladó: Random Forest": {
+      "ROC-AUC": 0.8333744855967078,
+      "PR-AUC (AP)": 0.23735046421204653,
+      "recall (szenzitivitás)": 0.76,
+      "specificitás": 0.8106995884773662,
+      "precision": 0.17117117117117117,
+      "F1": 0.27941176470588236,
+      "MCC": 0.2985411581665344,
+      "balanced accuracy": 0.7853497942386831,
+      "Brier": 0.12308094854923474,
+      "TP": 38.0,
+      "FP": 184.0,
+      "FN": 12.0,
+      "TN": 788.0
+    }
+  },
+  "bootstrap_diff_ci_roc_auc": [
+    -0.017746961644054628,
+    0.015772864999445458
+  ],
+  "test_5x2cv_roc_auc": {
+    "t": -1.6773045519869323,
+    "p_t": 0.15432679262998666,
+    "F": 1.4550254829750535,
+    "p_F": 0.35585090256447244
+  },
+  "mcnemar": {
+    "chi2": 47.08045977011494,
+    "p": 6.8131556793570684e-12
+  }
+}
